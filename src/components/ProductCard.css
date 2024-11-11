@@ -1,0 +1,104 @@
+/* src/components/ProductCard.css */
+
+/* Container styling for each product card */
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 250px; /* Limit the width for a consistent grid */
+    margin: auto;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image styling with consistent dimensions */
+  .product-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop the image to fit the area */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Text container for consistent alignment */
+  .product-card-content {
+    flex-grow: 1; /* Allow this section to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Product title styling */
+  .product-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    min-height: 3rem; /* Fixed height to align titles */
+    display: flex;
+    align-items: center; /* Center-align the title text */
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Description or price styling with consistent alignment */
+  .product-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button styling for add-to-cart or details button */
+  .product-card a {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .product-card a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .product-card img {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-card {
+      padding: 0.75rem;
+    }
+  
+    .product-card img {
+      height: 150px;
+    }
+  
+    .product-card h3 {
+      font-size: 0.9rem;
+    }
+  
+    .product-card p {
+      font-size: 0.9rem;
+    }
+  }
+  
